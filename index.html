@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Animation & Social Media Virality - Premium Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PayPal SDK Integration -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+
+    <style>
+        :root {
+            --bg-dark: #0f0c1b;
+            --bg-card: #19142e;
+            --primary: #8b5cf6;
+            --primary-glow: #a78bfa;
+            --secondary: #06b6d4;
+            --accent: #f43f5e;
+            --gold: #fbbf24;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #2e264f;
+            --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+        h1, h2, h3, .brand-font { font-family: 'Fredoka', sans-serif; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        .hero-landing { text-align: center; padding: 30px 0; }
+        .hero-title { font-size: 3.2rem; margin-bottom: 16px; background: linear-gradient(to right, #fff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-desc { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; margin: 0 auto 20px; }
+
+        .grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        @media (max-width: 850px) { .grid-layout { grid-template-columns: 1fr; } }
+
+        .features-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 32px; }
+        .feature-item { display: flex; gap: 16px; margin-bottom: 24px; }
+        .feature-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(139, 92, 246, 0.2); color: var(--primary-glow); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .feature-info h4 { font-size: 1.2rem; margin-bottom: 4px; }
+        .feature-info p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .checkout-box { background: var(--bg-card); border: 2px solid var(--primary); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .price-tag { text-align: center; margin: 20px 0; background: rgba(139, 92, 246, 0.1); padding: 16px; border-radius: 16px; border: 1px dashed var(--primary); }
+        .old-price { text-decoration: line-through; color: var(--accent); font-size: 1.3rem; margin-right: 10px; }
+        .new-price { font-size: 2.8rem; font-weight: 800; color: var(--gold); font-family: 'Fredoka', sans-serif; }
+        .save-badge { background: var(--accent); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 12px; }
+
+        .form-group { margin-bottom: 16px; text-align: left; }
+        .form-group label { display: block; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-muted); }
+        .form-group input { width: 100%; padding: 14px; border-radius: 12px; background: #0f0c1b; border: 1px solid var(--border); color: #fff; font-size: 1rem; outline: none; }
+        .form-group input:focus { border-color: var(--primary); }
+
+        #paypal-button-container { margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Title -->
+        <div class="hero-landing">
+            <span class="save-badge"><i class="fa-solid fa-fire"></i> Special Discount Offer</span>
+            <h1 class="hero-title">Master Animation & Social Media Virality</h1>
+            <p class="hero-desc">Learn how to create high-performing animated content from scratch, master social media algorithm strategy, use cutting-edge creation workflows, and get certified.</p>
+        </div>
+
+        <div class="grid-layout">
+            <!-- Left Column: What the course covers -->
+            <div class="features-box">
+                <h2 style="margin-bottom: 24px; font-size: 1.8rem;">What's Inside The Academy:</h2>
+                
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="feature-info">
+                        <h4>Social Media Algorithm Mastery</h4>
+                        <p>Learn the 3-second hook rule, retention strategies, and how to structure videos for maximum reach.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-film"></i></div>
+                    <div class="feature-info">
+                        <h4>Full Animation Production Pipeline</h4>
+                        <p>Step-by-step guidance on scriptwriting, character posing, timing, and final video editing.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="feature-info">
+                        <h4>Curated Tools & AI Recommendations</h4>
+                        <p>Explore recommended creation software and AI acceleration tools directly inside the portal.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="feature-info">
+                        <h4>Viral Estimator & Certification</h4>
+                        <p>Use our built-in viral potential calculator and earn an official creator certificate upon completion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -> Price -> Payment -->
+            <div class="checkout-box">
+                <div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 16px;">Step 1: Enter Your Student Details</h3>
+                    <form id="studentForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" placeholder="+1234567890" required>
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.4rem; margin-top: 10px;">Step 2: Complete Payment</h3>
+                    <!-- Price Tag placed right under student information -->
+                    <div class="price-tag">
+                        <span class="old-price">$500</span>
+                        <span class="new-price">$400</span>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">One-time Payment • Full Lifetime Access</p>
+                    </div>
+
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                const name = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+
+                if (!name || !email || !phone) {
+                    alert('Please fill in your Full Name, Email, and Phone Number before proceeding.');
+                    return false;
+                }
+
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: { value: '400.00' },
+                        description: 'Animation & Social Media Academy Lifetime Pass'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    localStorage.setItem('hasPaidAccess', 'true');
+                    localStorage.setItem('studentName', document.getElementById('fullName').value);
+                    alert('Payment Successful! Welcome ' + details.payer.name.given_name + '. Redirecting to your course...');
+                    window.location.href = "course.html";
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
